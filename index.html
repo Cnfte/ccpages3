@@ -3,71 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>!--服务器受到攻击--!</title>
+    <title>下线通知</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', 'Microsoft YaHei', sans-serif;
-        }
-        body {
-            background-color: #f5f7fa;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .notice-card {
-            background: white;
+        /* 容器样式：限制宽度、居中显示，避免文字超出 */
+        .notice-container {
+            max-width: 600px; /* 固定最大宽度，适配不同屏幕 */
             width: 100%;
-            max-width: 600px;
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-            border-top: 4px solid #ff4d4f;
+            margin: 50px auto; /* 上下留空，左右居中 */
+            padding: 20px 30px;
+            border: 1px solid #eee; /* 可选：加边框提升质感 */
+            border-radius: 8px; /* 可选：圆角优化视觉 */
+            box-sizing: border-box; /* 确保 padding 不撑大容器 */
         }
-        h1 {
-            color: #ff4d4f;
-            font-size: 24px;
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #eee;
-        }
-        h2 {
+        /* 标题样式：控制间距，突出层级 */
+        .notice-container h1 {
+            text-align: center;
             color: #333;
-            font-size: 18px;
-            margin: 30px 0 15px;
+            margin-bottom: 30px;
+            font-size: 24px;
         }
-        p {
+        .notice-container h2 {
+            color: #444;
+            margin: 18px 0;
+            font-size: 18px;
+            line-height: 1.6; /* 行高优化，避免换行拥挤 */
+        }
+        /* 段落样式：控制行高、间距，确保文字易读 */
+        .notice-container p {
             color: #666;
+            margin: 15px 0;
             font-size: 16px;
             line-height: 1.8;
-            margin-bottom: 12px;
         }
-        .contact-info {
-            margin-top: 15px;
-        }
-        .contact-info p {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .contact-info p::before {
-            content: "•";
-            color: #ff4d4f;
-            font-weight: bold;
+        /* 适配小屏幕（如手机），避免排版错乱 */
+        @media (max-width: 500px) {
+            .notice-container {
+                padding: 15px 20px;
+                margin: 20px auto;
+            }
+            .notice-container h1 {
+                font-size: 22px;
+            }
+            .notice-container h2 {
+                font-size: 16px;
+            }
+            .notice-container p {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="notice-card">
-      <h2>即日起，本域名下所有的相关服务全部停止</h2>
+    <div class="notice-container">
+        <h1>感谢你的陪伴</h1>
+        <h2>本服务因为被有心之人攻击从2025/10/3日起停止服务提供永久下线</h2>
+        <h2>从8/8开始一共有26435位机长找到了回家的路</h2>
+        <h2>感谢陪伴后会有期</h2>
+        <p>如有需要可以加我QQ来获取最新的回家的路</p>
+        <p>QQ:3893262114</p><q>服务时间：周六日早9:00-下午4:00<q>
     </div>
-  <div class="contact-info">
-    <p>因为服务器三天两头被攻击仅是9/23号当天就被打了250GB流量黑洞了</p>
-    <p>从8/8到现在为止被打掉的次数不下十次流量超500GB我的服务器即日起停止服务何时再开另行通知</p>
-  </div>
 </body>
 </html>
